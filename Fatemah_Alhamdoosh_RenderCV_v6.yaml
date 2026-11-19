@@ -1,0 +1,127 @@
+cv:
+  name: Fatemah Alhamdoosh
+  headline: PhD Researcher in Computer Vision and Multimodal Machine Learning
+  location: Florence, Italy
+  email: fatemah.alhamdoosh@unifi.it
+  social_networks:
+  - network: GitHub
+    username: fatemah-alh
+  - network: LinkedIn
+    username: fatemah-alhamdoosh
+  sections:
+    Professional Summary:
+    - PhD researcher specialising in computer vision, self-supervised and multimodal representation learning.
+    - First author of two research papers; developed a multimodal egocentric vision–IMU benchmark.
+    - Leading research on human movement foundation models and AI activities in an international clinical collaboration.
+    Professional Experience:
+    - company: University of Florence — MICC
+      position: PhD Researcher
+      location: Florence, Italy
+      start_date: 2023-11
+      end_date: present
+      summary: Researching video understanding, self-supervised learning and multimodal representations for human movement
+        analysis and healthcare.
+    - company: University of Edinburgh — School of Informatics
+      position: Visiting PhD Researcher
+      location: Edinburgh, UK
+      start_date: 2025-03
+      end_date: 2026-02
+      summary: Developed an egocentric video and IMU benchmark and evaluated deep learning methods for activity recognition
+        and motor impairment assessment.
+    - company: Agenzia Regionale di Sanità della Toscana (ARS)
+      position: Research Fellow
+      location: Tuscany, Italy
+      start_date: '2021'
+      end_date: '2022'
+      summary: Designed and developed a management system automating event administration and certificate generation.
+    Education:
+    - institution: University of Florence
+      area: Smart Computing
+      degree: PhD
+      start_date: 2023-11
+      end_date: 2027-10
+      summary: 'Expected Oct 2027. Provisional thesis: Towards Domain-Invariant, Motion-Centric Multimodal Learning for
+        Clinical Motor Impairment Assessment.'
+    - institution: University of Florence
+      area: Computer Engineering
+      degree: MSc
+      start_date: '2019'
+      end_date: '2023'
+      summary: '110/110. Thesis: Pain Index Estimation from Facial Landmark Analysis with Graph Neural Networks.'
+    - institution: University of Florence
+      area: Computer Engineering
+      degree: BSc
+      start_date: '2016'
+      end_date: '2019'
+      summary: '101/110. Thesis: Optimisation of Multi-View Detectors for High-Resolution Video.'
+    Teaching Experience:
+    - company: Tamkeen (Remote)
+      position: Machine Learning Instructor
+      start_date: 2025-12
+      end_date: present
+      summary: Designing and delivering machine learning and deep learning courses, including lectures and practical
+        materials.
+    - company: University of Edinburgh
+      position: Academic Tutor & Course Marker
+      start_date: 2025-10
+      end_date: 2025-12
+      summary: Tutored Accelerated Natural Language Processing (ANLP) and marked Machine Learning Practice (MLP).
+    Selected Publications:
+    - title: 'EgoInertia-MI: A Multimodal Egocentric Vision and IMU Benchmark for Motor Impairment Assessment'
+      authors:
+      - '*Fatemah Alhamdoosh*'
+      - Pietro Pala
+      - Abduallah Mohamed
+      - D. K. Arvind
+      journal: arXiv preprint, arXiv:2607.03934
+      date: '2026'
+      url: https://arxiv.org/abs/2607.03934
+    - title: Pain Level Estimation From Videos by Analyzing the Dynamics of Facial Landmarks With a Spatio-Temporal Graph
+        Neural Network
+      authors:
+      - '*Fatemah Alhamdoosh*'
+      - Pietro Pala
+      - Stefano Berretti
+      journal: IEEE Transactions on Biometrics, Behavior, and Identity Science, 7, 610–619
+      date: '2025'
+      doi: 10.1109/TBIOM.2025.3592836
+    Ongoing Research Projects:
+    - name: MotorFM
+      summary: Leading University of Florence research on generalisable multimodal foundation models for human movement
+        understanding and motor impairment assessment.
+    - name: MUNDI
+      summary: Leading AI research activities in an international clinical collaboration focused on multimodal neurodegenerative
+        disease assessment, study design and data collection planning.
+    Completed Research Projects:
+    - name: EgoInertia-MI
+      summary: Designed a multimodal egocentric video–IMU dataset and benchmark for assessment of simulated motor impairment.
+    - name: Video-Based Pain Estimation
+      summary: Developed a spatio-temporal graph neural network for pain estimation using facial landmark dynamics.
+    Technical Skills:
+    - label: Programming & Frameworks
+      details: Python, PyTorch, PyTorch Lightning, NumPy, Pandas, Scikit-learn, OpenCV, Git, Linux
+    - label: ML Research
+      details: Video Understanding, ViTs, Video Transformers, GNNs, Pose Estimation, Temporal Modelling, SSL, Foundation
+        Models, Multimodal Learning, Domain Generalisation
+    - label: Research Engineering
+      details: Distributed GPU Training (DDP), CUDA, Fine-Tuning, LoRA, Dataset Development, Sensor Synchronisation,
+        Experimental Evaluation, HPC, Weights & Biases / MLflow
+    Personal Interests:
+    - label: Plant care
+      details: Growing and caring for 10+ plants, with blooms throughout the year.
+    - label: Handcrafts
+      details: Embroidery and handmade projects.
+    - label: Volunteering
+      details: Scout leadership and activities with children.
+    - label: Social causes
+      details: Freedom of expression and women’s and children’s rights.
+    Languages & Certifications:
+    - Arabic (Native), Italian (Native), English (Professional).
+    - Good Clinical Practice (GCP) certification.
+  phone: '+393510711263'
+design:
+  theme: classic
+  page:
+    size: a4
+locale:
+  language: english
