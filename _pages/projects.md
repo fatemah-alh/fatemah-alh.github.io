@@ -1,65 +1,43 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: Research
+permalink: /research/
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 1
+description: Learning representations of human movement from video and wearable sensing.
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
+<link rel="stylesheet" href="{{ "/assets/css/academic.css" | relative_url }}">
+
+{% assign sections = site.data.cv.cv.sections %}
+
+<section class="academic-section" aria-labelledby="ongoing-research">
+  <p class="academic-eyebrow">Current directions</p>
+  <h2 id="ongoing-research">Ongoing Research</h2>
+  <div class="academic-grid">
+    {% for project in sections['Ongoing Research Projects'] %}
+    <article class="academic-research-entry">
+      <h3 id="{{ project.name | slugify }}">{{ project.name }}</h3>
+      <p>{{ project.summary }}</p>
+    </article>
     {% endfor %}
   </div>
-  {% endif %}
+</section>
+
+<section class="academic-section" aria-labelledby="completed-research">
+  <p class="academic-eyebrow">Previous work</p>
+  <h2 id="completed-research">Completed Research</h2>
+  {% for project in sections['Completed Research Projects'] %}
+  <article class="academic-research-entry">
+    <h3 id="{{ project.name | slugify }}">{{ project.name }}</h3>
+    <p>{{ project.summary }}</p>
+    {% if project.name == 'EgoInertia-MI' %}
+    <p><a href="https://arxiv.org/abs/2607.03934">Read the preprint</a> · <a href="https://fatemah-alh.github.io/EgoInertia-MI-Page/">Project website</a></p>
+    {% elsif project.name == 'Video-Based Pain Estimation' %}
+    <p><a href="https://doi.org/10.1109/TBIOM.2025.3592836">Read the journal article</a></p>
+    {% endif %}
+  </article>
   {% endfor %}
+</section>
 
-{% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+<p>For publication records and citations, see <a href="{{ '/publications/' | relative_url }}">Publications</a>.</p>

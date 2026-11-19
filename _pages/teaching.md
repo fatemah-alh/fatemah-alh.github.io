@@ -1,15 +1,21 @@
 ---
 layout: page
+title: Teaching
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 4
+description: Machine learning, deep learning and natural language processing.
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+<link rel="stylesheet" href="{{ "/assets/css/academic.css" | relative_url }}">
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
-
-{% include courses.liquid %}
+{% for role in site.data.cv.cv.sections['Teaching Experience'] %}
+<section class="academic-timeline-entry">
+  <p class="academic-date">{{ role.start_date | append: '-01' | date: '%b %Y' }} – {% if role.end_date == 'present' %}Present{% else %}{{ role.end_date | append: '-01' | date: '%b %Y' }}{% endif %}</p>
+  <div>
+    <h2>{{ role.company }}</h2>
+    <h3>{{ role.position }}</h3>
+    <p>{{ role.summary }}</p>
+  </div>
+</section>
+{% endfor %}
