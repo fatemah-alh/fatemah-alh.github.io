@@ -9,13 +9,9 @@ description: Plants, handcrafts and community.
 
 <link rel="stylesheet" href="{{ "/assets/css/academic.css" | relative_url }}">
 
-<p>Outside research, I enjoy caring for plants and working on embroidery and handmade projects.
-Scout volunteering and human rights are also important parts of my life.</p>
-
-<div class="academic-grid">
 {% for interest in site.data.cv.cv.sections['Personal Interests'] %}
-<section class="academic-section">
-  <h2>{{ interest.label }}</h2>
+<section class="academic-section" aria-labelledby="{{ interest.label | slugify }}">
+  <h2 id="{{ interest.label | slugify }}">{{ interest.label }}</h2>
   <p>{{ interest.details }}</p>
   {% if interest.label == 'Plant care' %}
   <div class="academic-photo-placeholder">Photo placeholder · Plants and blooms</div>
@@ -24,4 +20,3 @@ Scout volunteering and human rights are also important parts of my life.</p>
   {% endif %}
 </section>
 {% endfor %}
-</div>

@@ -15,17 +15,20 @@ metadata. This content page reads the unchanged RenderCV data without a theme ov
 {% endcomment %}
 {% assign cv = site.data.cv.cv %}
 <div class="academic-cv-header">
-  <h2>{{ cv.name }}</h2>
-  <p>{{ cv.headline }}<br>{{ cv.location }} · <a href="mailto:{{ cv.email }}">{{ cv.email }}</a></p>
+  <p><strong>{{ cv.name }}</strong></p>
+  <p>{{ cv.location }} · <a href="mailto:{{ cv.email }}">{{ cv.email }}</a></p>
   <div class="academic-actions">
     <a class="academic-button" href="{{ '/assets/rendercv/rendercv_output/Fatemah_Alhamdoosh_CV.pdf' | relative_url }}" download>Download CV (PDF)</a>
   </div>
 </div>
+<details class="academic-cv-index">
+<summary>Jump to a section</summary>
 <nav class="academic-cv-nav" aria-label="CV sections">
   {% for section in cv.sections %}
   <a href="#{{ section[0] | slugify }}">{{ section[0] }}</a>
   {% endfor %}
 </nav>
+</details>
 
 {% for section in cv.sections %}
 <section class="academic-cv-section" aria-labelledby="{{ section[0] | slugify }}">
